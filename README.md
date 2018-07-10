@@ -67,7 +67,7 @@ dokku config:set grafana GF_SERVER_HTTP_PORT=5000
 ### Setting secret key
 
 ```bash
-dokku config:set grafana GF_SECURITY_SECRET_KEY=$(echo `openssl rand -base64 45` | tr -d \=+ | cut -c 1-32))
+dokku config:set grafana GF_SECURITY_SECRET_KEY=$(echo `openssl rand -base64 45` | tr -d \=+ | cut -c 1-32)
 ```
 
 ## Domain setup
