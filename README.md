@@ -1,6 +1,6 @@
 ![](.github/images/repo_header.png)
 
-[![Grafana Version](https://img.shields.io/badge/Grafana_version-5.1.3-green.svg)](https://github.com/grafana/grafana/releases/tag/v5.1.3) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/D1ceWard/grafana_on_dokku/graphs/commit-activity)
+[![Grafana Version](https://img.shields.io/badge/Grafana_version-5.2.1-green.svg)](https://github.com/grafana/grafana/releases/tag/v5.2.1) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/D1ceWard/grafana_on_dokku/graphs/commit-activity)
 # Run Grafana on Dokku
 
 ## Perquisites
@@ -61,7 +61,7 @@ dokku config:set grafana GF_DATABASE_URL='previously_copied_database_url'
 ```
 ```bash
 # Set port to 5000
-dokku config:set GF_SERVER_HTTP_PORT=5000
+dokku config:set grafana GF_SERVER_HTTP_PORT=5000
 ```
 
 ### Setting secret key
