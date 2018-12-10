@@ -1,1 +1,1 @@
-FROM grafana/grafana:5.4.0
+FROM grafana/grafana:5.4.1
