@@ -115,6 +115,7 @@ Now we can push Grafana to Dokku (_before_ moving on to the [next part](#domain-
 git push dokku master
 ```
 
+
 ## SSL certificate
 
 Last but not least, we can go an grab the SSL certificate from [Let's
@@ -131,6 +132,14 @@ dokku config:set --no-restart grafana DOKKU_LETSENCRYPT_EMAIL=you@example.com
 dokku letsencrypt grafana
 ```
 
+In case of an error `Challenge validation has failed`, please check your proxy settings:
+```bash
+dokku proxy:report                          # you should see http:80:5000
+dokku proxy:ports-add grafana http:80:5000  # otherwise, add the proxy to the port
+```
+
 ## Wrapping up
 
 Your Grafana instance should now be available on [https://grafana.example.com](https://grafana.example.com).
+
+
