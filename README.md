@@ -142,4 +142,8 @@ dokku proxy:ports-add grafana http:80:5000  # otherwise, add the proxy to the po
 
 Your Grafana instance should now be available on [https://grafana.example.com](https://grafana.example.com).
 
+To add Grafana plugins, simply set the environment variable named `GF_INSTALL_PLUGINS`:
+```
+dokku config:set GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-github-datasource
+```
 
