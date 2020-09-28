@@ -144,6 +144,6 @@ Your Grafana instance should now be available on [https://grafana.example.com](h
 
 To add Grafana plugins, simply set the environment variable named `GF_INSTALL_PLUGINS`:
 ```
-dokku config:set GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-github-datasource
+dokku config:set grafana GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-github-datasource
 ```
 
