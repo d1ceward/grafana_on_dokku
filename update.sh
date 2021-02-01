@@ -13,7 +13,7 @@ if [ "v${RELEASE}" = $CURRENT_RELEASE ]; then
 fi
 
 # Replace "from" line in dockerfile with the new release
-sed -i "s#FROM.*#FROM grafana/grafana:${RELEASE}#" Dockerfile
+sed -i "s#ARG GRAFANA_VERSION.*#ARG GRAFANA_VERSION=\"${RELEASE}\"#" Dockerfile
 
 # Replace README link to grafana release
 GRAFANA_BADGE="[![Grafana](https://img.shields.io/badge/Grafana-${RELEASE}-blue.svg)](https://github.com/grafana/grafana/releases/tag/v${RELEASE})"
