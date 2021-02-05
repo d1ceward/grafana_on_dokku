@@ -1,6 +1,6 @@
 ![](.github/images/repo_header.png)
 
-[![Grafana](https://img.shields.io/badge/Grafana-7.3.7-blue.svg)](https://github.com/grafana/grafana/releases/tag/v7.3.7)
+[![Grafana](https://img.shields.io/badge/Grafana-7.4.0-blue.svg)](https://github.com/grafana/grafana/releases/tag/v7.4.0)
 [![Dokku](https://img.shields.io/badge/Dokku-Repo-blue.svg)](https://github.com/dokku/dokku)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/D1ceWard/grafana_on_dokku/graphs/commit-activity)
 # Run Grafana on Dokku
