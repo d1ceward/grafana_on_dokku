@@ -1,6 +1,6 @@
 ARG GRAFANA_VERSION="7.4.0"
 
-FROM grafana/grafana:${GRAFANA_VERSION}
+FROM grafana/grafana:7.4.1
 
 USER root
 
