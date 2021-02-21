@@ -1,4 +1,4 @@
-ARG GRAFANA_VERSION="7.4.0"
+ARG GRAFANA_VERSION="7.4.2"
 
 FROM grafana/grafana:7.4.1
 
