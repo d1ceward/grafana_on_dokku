@@ -5,7 +5,7 @@ git pull
 CURRENT_RELEASE=$(git tag | tail -1)
 
 # Get lastest release name
-RELEASE=$(curl --silent "https://github.com/grafana/grafana/releases/latest" | sed 's#.*tag/\(.*\)\".*#\1#' | cut -f2 -d 'v')
+RELEASE=$(curl -s https://api.github.com/repos/grafana/grafana/tags | jq | grep -o '"v[0-9]*\.[0-9]*\.[0-9]*"'| head -1 | sed 's/v//g; s/\"//g')
 
 # Exit script if already up to date
 if [ "v${RELEASE}" = $CURRENT_RELEASE ]; then
