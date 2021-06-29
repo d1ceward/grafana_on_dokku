@@ -29,7 +29,7 @@ ENV GF_RENDERER_PLUGIN_CHROME_BIN="/usr/bin/chromium-browser"
 RUN if [ $GF_INSTALL_IMAGE_RENDERER_PLUGIN = "true" ]; then \
     grafana-cli \
         --pluginsDir "$GF_PATHS_PLUGINS" \
-        --pluginUrl https://github.com/grafana/grafana-image-renderer/releases/latest/download/plugin-linux-x64-glibc-no-chromium.zip \
+        --pluginUrl https://github.com/grafana/grafana-image-renderer/releases/download/v2.1.1/plugin-linux-x64-glibc-no-chromium.zip \
         plugins install grafana-image-renderer; \
 fi
 
