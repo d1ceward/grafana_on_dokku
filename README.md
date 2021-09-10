@@ -82,6 +82,14 @@ dokku config:set grafana GF_SERVER_HTTP_PORT=5000
 dokku config:set grafana GF_SECURITY_SECRET_KEY=$(echo `openssl rand -base64 45` | tr -d \=+ | cut -c 1-32)
 ```
 
+## Domain setup
+
+To get the routing working, we need to apply a few settings. First we set the domain.
+
+```bash
+dokku domains:set grafana grafana.example.com
+```
+
 ## Push Grafana to Dokku
 
 ### Grabbing the repository
@@ -114,14 +122,6 @@ Now we can push Grafana to Dokku (_before_ moving on to the [next part](#domain-
 
 ```bash
 git push dokku master
-```
-
-## Domain setup
-
-To get the routing working, we need to apply a few settings. First we set the domain.
-
-```bash
-dokku domains:set grafana grafana.example.com
 ```
 
 ## SSL certificate
