@@ -2,7 +2,7 @@
 
 [![Grafana](https://img.shields.io/badge/Grafana-9.0.4-blue.svg)](https://github.com/grafana/grafana/releases/tag/v9.0.4)
 [![Dokku](https://img.shields.io/badge/Dokku-Repo-blue.svg)](https://github.com/dokku/dokku)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/D1ceWard/grafana_on_dokku/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/d1ceward/grafana_on_dokku/graphs/commit-activity)
 
 # Run Grafana on Dokku
 
@@ -99,13 +99,13 @@ First clone this repository onto your machine.
 #### Via SSH
 
 ```bash
-git clone git@github.com:D1ceWard/grafana_on_dokku.git
+git clone git@github.com:d1ceward/grafana_on_dokku.git
 ```
 
 #### Via HTTPS
 
 ```bash
-git clone https://github.com/D1ceWard/grafana_on_dokku.git
+git clone https://github.com/d1ceward/grafana_on_dokku.git
 ```
 
 ### Set up git remote
