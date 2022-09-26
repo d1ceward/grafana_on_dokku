@@ -136,7 +136,7 @@ dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git
 dokku config:set --no-restart grafana DOKKU_LETSENCRYPT_EMAIL=you@example.com
 
 # Generate certificate
-dokku letsencrypt grafana
+dokku letsencrypt:enable grafana
 ```
 
 In case of an error `Challenge validation has failed`, please check your proxy settings:
