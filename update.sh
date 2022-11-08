@@ -1,5 +1,8 @@
 # Pull upstream changes
+echo -e "\033[0;32m====>\033[0m Pull origin..."
 git pull
+
+echo -e "\033[0;32m====>\033[0m Initial check..."
 
 # Get current release name
 CURRENT_RELEASE=$(git tag | tail -1)
@@ -9,7 +12,16 @@ RELEASE=$(curl -s https://api.github.com/repos/grafana/grafana/tags | jq | grep 
 
 # Exit script if already up to date
 if [ "v${RELEASE}" = $CURRENT_RELEASE ]; then
+  echo -e "\033[0;32m=>\033[0m Already up to date..."
   exit 0
+fi
+
+# Download original Dockerfile and check for change
+curl -s -q https://raw.githubusercontent.com/grafana/grafana/v${RELEASE}/packaging/docker/custom/Dockerfile -o original_dockerfile
+if ! sha256sum -c --quiet original_dockerfile.sha256sum; then
+  echo -e "\033[0;31m===>\033[0m Checksum of the original dockerfile changed"
+  echo -e "\033[0;31m=>\033[0m Require manual intervention !"
+  exit 1
 fi
 
 # Replace "from" line in dockerfile with the new release
