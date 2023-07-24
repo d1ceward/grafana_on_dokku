@@ -133,7 +133,7 @@ Last but not least, we can go an grab the SSL certificate from [Let's Encrypt](h
 dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git
 
 # Set certificate contact email
-dokku config:set --no-restart grafana DOKKU_LETSENCRYPT_EMAIL=you@example.com
+dokku letsencrypt:set grafana email you@example.com
 
 # Generate certificate
 dokku letsencrypt:enable grafana
